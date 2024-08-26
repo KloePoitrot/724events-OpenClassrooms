@@ -15,7 +15,6 @@ import { useData } from "../../contexts/DataContext";
 const Page = () => {
   const {data} = useData();
   const last = data?.events.find((evt) => evt.id === data?.events.length)
-  console.log(last)
   return <>
     <header>
       <Menu />
@@ -120,10 +119,11 @@ const Page = () => {
         <h3>Notre derniére prestation</h3>
         <EventCard
           imageSrc={last?.cover}
+          imageAlt="Image du dernier évènement"
           title={last?.title}
           date={new Date(last?.date)}
-          small
           label={last?.type}
+          small
         />
       </div>
       <div className="col contact">
