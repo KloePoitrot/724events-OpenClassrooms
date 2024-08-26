@@ -7,7 +7,7 @@ describe("When a event card is created", () => {
     <EventCard
       imageSrc="http://src-image" 
       imageAlt="image-alt-text" 
-      date={new Date("2022-04-01")} 
+      date={new Date("2022-04-01")}
       title="test event"
       label="test label"
     />);
